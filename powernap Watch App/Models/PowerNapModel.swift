@@ -14,21 +14,21 @@ struct PowerNapSession: Identifiable, Codable {
         return nil
     }
     var status: NapStatus
-    var hrvBaseline: Double? // 用戶的HRV基準值
-    var hrvDuringNap: [HRVReading]? // 小睡期間的HRV讀數
+    var restingHeartRate: Double? // 用戶的靜息心率
+    var heartRateDuringNap: [HeartRateReading]? // 小睡期間的心率讀數
     
     init(duration: Int) {
         self.startTime = Date()
         self.duration = duration
         self.status = .monitoring
-        self.hrvDuringNap = []
+        self.heartRateDuringNap = []
     }
 }
 
-/// HRV讀數模型
-struct HRVReading: Codable {
+/// 心率讀數模型
+struct HeartRateReading: Codable {
     var timestamp: Date
-    var value: Double  // SDNN值，單位毫秒
+    var value: Double  // 心率值，單位bpm
 }
 
 /// 小睡的狀態枚舉

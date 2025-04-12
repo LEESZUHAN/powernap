@@ -1,0 +1,14 @@
+
+Showing Recent Errors Only
+
+Prepare build
+error: Multiple commands produce '/Users/michaellee/Library/Developer/Xcode/DerivedData/powernap-andpvffqpuvbpydqtebjncivjmxc/Build/Products/Debug-watchsimulator/powernap Watch App.app/Info.plist'
+    note: Target 'powernap Watch App' (project 'powernap') has copy command from '/Users/michaellee/Documents/PowerNap/powernap Watch App/Info.plist' to '/Users/michaellee/Library/Developer/Xcode/DerivedData/powernap-andpvffqpuvbpydqtebjncivjmxc/Build/Products/Debug-watchsimulator/powernap Watch App.app/Info.plist'
+    note: Target 'powernap Watch App' (project 'powernap') has process command with output '/Users/michaellee/Library/Developer/Xcode/DerivedData/powernap-andpvffqpuvbpydqtebjncivjmxc/Build/Products/Debug-watchsimulator/powernap Watch App.app/Info.plist'
+
+
+Multiple commands produce '/Users/michaellee/Library/Developer/Xcode/DerivedData/powernap-andpvffqpuvbpydqtebjncivjmxc/Build/Products/Debug-watchsimulator/powernap Watch App.app/Info.plist'
+
+
+
+Build failed    4/5/25, 7:09 PM    2.5 seconds

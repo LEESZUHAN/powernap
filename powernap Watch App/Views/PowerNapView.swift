@@ -155,24 +155,19 @@ struct PowerNapView: View {
             
             // 自定義時間選擇器
             ZStack {
-                // 灰色背景框
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color.gray, lineWidth: 2)
-                    .background(Color.black.opacity(0.3))
-                    .cornerRadius(20)
+                // 移除自定義邊框，只保留系統的綠色邊框
                 
                 // 時間選擇器內容
                 Picker("選擇時間", selection: $selectedTimeDouble) {
                     ForEach(1...30, id: \.self) { minute in
                         Text("\(minute):00")
                             .foregroundColor(.white)
-                            .font(.system(size: geometry.size.width * 0.12)) // 為選擇器文字設置明確的字體大小
+                            .font(.system(size: geometry.size.width * 0.12))
                             .tag(Double(minute))
                     }
                 }
                 .pickerStyle(WheelPickerStyle())
                 .labelsHidden()
-                .accentColor(.gray)
                 .onChange(of: selectedTimeDouble) { oldValue, newValue in
                     WKInterfaceDevice.current().play(.click)
                 }

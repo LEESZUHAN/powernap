@@ -54,6 +54,20 @@ struct SettingsView: View {
                             Toggle("", isOn: $notificationsEnabled)
                                 .labelsHidden()
                         }
+                        
+                        Divider()
+                        
+                        Button(action: viewModel.sendFeedback) {
+                            HStack {
+                                Image(systemName: "envelope.fill")
+                                Text("發送測試報告")
+                                    .id("feedback_button")
+                                Spacer()
+                                Image(systemName: "chevron.right")
+                                    .font(.footnote)
+                                    .foregroundColor(.gray)
+                            }
+                        }
                     }
                     .padding(.horizontal)
                     

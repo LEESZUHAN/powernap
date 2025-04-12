@@ -11,7 +11,8 @@
 PowerNap 應用收集以下類型的資訊：
 
 ### 健康數據
-- **心率變異性 (HRV)** 數據：用於偵測您的睡眠狀態
+- **心率數據**：用於偵測您的睡眠狀態
+- **靜息心率數據**：用於建立個人化睡眠判定基準
 - **睡眠相關資訊**：包括入睡時間、喚醒時間和睡眠時長
 
 ### 運動數據
@@ -20,6 +21,7 @@ PowerNap 應用收集以下類型的資訊：
 ### 用戶偏好設定
 - **小睡時長設定**：您選擇的小睡時長偏好
 - **應用使用統計**：功能使用頻率和模式，用於改進應用體驗
+- **年齡組設定**：用於調整心率閾值判定標準
 
 ## 資訊使用方式
 
@@ -93,7 +95,8 @@ Welcome to the PowerNap app. We value your privacy and this Privacy Policy is de
 PowerNap app collects the following types of information:
 
 ### Health Data
-- **Heart Rate Variability (HRV)** data: Used to detect your sleep state
+- **Heart rate data**: Used to detect your sleep state
+- **Resting heart rate data**: Used to establish personalized sleep detection baseline
 - **Sleep-related information**: Including time of falling asleep, wake-up time, and sleep duration
 
 ### Motion Data
@@ -102,6 +105,7 @@ PowerNap app collects the following types of information:
 ### User Preferences
 - **Nap duration settings**: Your preferred nap duration choices
 - **App usage statistics**: Feature usage frequency and patterns, used to improve the app experience
+- **Age group settings**: Used to adjust heart rate threshold criteria
 
 ## How We Use Information
 

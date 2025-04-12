@@ -1,0 +1,464 @@
+2025-04-12 08:31:53 +0000 [MT] Rejected distribution method <IDEDistributionMethodTVOSAppStoreDistribution: 0x60000d45c4f0> because it doesn't support distributing archive
+2025-04-12 08:31:53 +0000 [MT] Rejected distribution method <IDEDistributionMethodAppStoreDistributionVisionOS: 0x60000d45ca70> because it doesn't support distributing archive
+2025-04-12 08:31:53 +0000 [MT] Rejected distribution method <IDEDistributionMethodMacAppStoreDistribution: 0x60000d45c020> because it doesn't support distributing archive
+2025-04-12 08:31:53 +0000 [MT] Rejected distribution method <IDEDistributionMethodiOSAppStoreDistribution: 0x60000d45d410> because it doesn't support distributing archive
+2025-04-12 08:31:53 +0000 [MT] Rejected distribution method <IDEDistributionMethodTVOSAdHoc: 0x60000d45cec0> because it doesn't support distributing archive
+2025-04-12 08:31:53 +0000 [MT] Rejected distribution method <IDEDistributionMethodWatchOSAdHoc: 0x60000d45da10> because it doesn't support distributing archive
+2025-04-12 08:31:53 +0000 [MT] Rejected distribution method <IDEDistributionMethodiOSAdHoc: 0x60000d45cc40> because it doesn't support distributing archive
+2025-04-12 08:31:53 +0000 [MT] Rejected distribution method <IDEDistributionMethodAdHocVisionOS: 0x60000d45cf50> because it doesn't support distributing archive
+2025-04-12 08:31:53 +0000 [MT] Rejected distribution method <IDEDistributionMethodMacAdHoc: 0x60000d45e010> because it doesn't support distributing archive
+2025-04-12 08:31:53 +0000 [MT] Rejected distribution method <IDEDistributionMethodiOSEnterprise: 0x60000d45c340> because it doesn't support distributing archive
+2025-04-12 08:31:53 +0000 [MT] Rejected distribution method <IDEDistributionMethodTVOSEnterprise: 0x60000d45c480> because it doesn't support distributing archive
+2025-04-12 08:31:53 +0000 [MT] Rejected distribution method <IDEDistributionMethodWatchOSEnterprise: 0x60000d45de00> because it doesn't support distributing archive
+2025-04-12 08:31:53 +0000 [MT] Rejected distribution method <IDEDistributionMethodEnterpriseVisionOS: 0x60000d45c900> because it doesn't support distributing archive
+2025-04-12 08:31:53 +0000 [MT] Rejected distribution method <IDEDistributionMethodWatchOSDevelopmentSigned: 0x60000d45e380> because it doesn't support distributing archive
+2025-04-12 08:31:53 +0000 [MT] Rejected distribution method <IDEDistributionMethodDevelopmentSigned: 0x60000d45cc60> because it doesn't support distributing archive
+2025-04-12 08:31:53 +0000 [MT] Rejected distribution method <IDEDistributionMethodTVOSDevelopmentSigned: 0x60000d45ccf0> because it doesn't support distributing archive
+2025-04-12 08:31:53 +0000 [MT] Rejected distribution method <IDEDistributionMethodDevelopmentSignedVisionOS: 0x60000d45cd20> because it doesn't support distributing archive
+2025-04-12 08:31:53 +0000 [MT] Rejected distribution method <IDEDistributionMethodDeveloperID: 0x60000d45c200> because it doesn't support distributing archive
+2025-04-12 08:31:53 +0000 [MT] Rejected distribution method <IDEDistributionMethodDeveloperIDNotarizedApp: 0x60000d45cc50> because it doesn't support distributing archive
+2025-04-12 08:31:53 +0000 [MT] Rejected distribution method <IDEDistributionMethodSaveBuiltProducts: 0x60000d45c0b0> because it doesn't support distributing archive
+2025-04-12 08:31:53 +0000 [MT] Rejected distribution method <IDEDistributionMethodDevelopmentSignedMac: 0x60000d45c370> because it doesn't support distributing archive
+2025-04-12 08:31:53 +0000 [MT] Rejected distribution method <IDEDistributionMethodMacApplication: 0x60000d45c4c0> because it doesn't support distributing archive
+2025-04-12 08:31:53 +0000 [MT] Rejected distribution method <IDEDistributionMethodTVOSAppStoreValidation: 0x60000d45c0f0> because it doesn't support distributing archive
+2025-04-12 08:31:53 +0000 [MT] Accepted distribution method <IDEDistributionMethodiOSAppStoreValidation: 0x60000d45c1b0>
+2025-04-12 08:31:53 +0000 [MT] Rejected distribution method <IDEDistributionMethodAppStoreValidationVisionOS: 0x60000d45cb00> because it doesn't support distributing archive
+2025-04-12 08:31:53 +0000 [MT] Rejected distribution method <IDEDistributionMethodMacAppStoreValidation: 0x60000d45cc20> because it doesn't support distributing archive
+2025-04-12 08:31:53 +0000 [MT] Rejected distribution method <IDEDistributionMethodExportArchive: 0x60000d45c3c0> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodTVOSAppStoreDistribution: 0x60000d45c4f0> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodAppStoreDistributionVisionOS: 0x60000d45ca70> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodMacAppStoreDistribution: 0x60000d45c020> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodiOSAppStoreDistribution: 0x60000d45d410> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodTVOSAdHoc: 0x60000d45cec0> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodWatchOSAdHoc: 0x60000d45da10> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodiOSAdHoc: 0x60000d45cc40> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodAdHocVisionOS: 0x60000d45cf50> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodMacAdHoc: 0x60000d45e010> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodiOSEnterprise: 0x60000d45c340> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodTVOSEnterprise: 0x60000d45c480> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodWatchOSEnterprise: 0x60000d45de00> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodEnterpriseVisionOS: 0x60000d45c900> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodWatchOSDevelopmentSigned: 0x60000d45e380> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodDevelopmentSigned: 0x60000d45cc60> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodTVOSDevelopmentSigned: 0x60000d45ccf0> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodDevelopmentSignedVisionOS: 0x60000d45cd20> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodDeveloperID: 0x60000d45c200> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodDeveloperIDNotarizedApp: 0x60000d45cc50> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodSaveBuiltProducts: 0x60000d45c0b0> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodDevelopmentSignedMac: 0x60000d45c370> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodMacApplication: 0x60000d45c4c0> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodTVOSAppStoreValidation: 0x60000d45c0f0> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Accepted distribution method <IDEDistributionMethodiOSAppStoreValidation: 0x60000d45c1b0>
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodAppStoreValidationVisionOS: 0x60000d45cb00> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodMacAppStoreValidation: 0x60000d45cc20> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodExportArchive: 0x60000d45c3c0> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Available distribution methods: {(
+    <IDEDistributionMethodiOSAppStoreValidation: 0x60000d45c1b0>
+)}
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodTVOSAppStoreDistribution: 0x60000d45c4f0> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodAppStoreDistributionVisionOS: 0x60000d45ca70> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodMacAppStoreDistribution: 0x60000d45c020> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodiOSAppStoreDistribution: 0x60000d45d410> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodTVOSAdHoc: 0x60000d45cec0> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodWatchOSAdHoc: 0x60000d45da10> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodiOSAdHoc: 0x60000d45cc40> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodAdHocVisionOS: 0x60000d45cf50> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodMacAdHoc: 0x60000d45e010> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodiOSEnterprise: 0x60000d45c340> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodTVOSEnterprise: 0x60000d45c480> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodWatchOSEnterprise: 0x60000d45de00> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodEnterpriseVisionOS: 0x60000d45c900> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodWatchOSDevelopmentSigned: 0x60000d45e380> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodDevelopmentSigned: 0x60000d45cc60> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodTVOSDevelopmentSigned: 0x60000d45ccf0> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodDevelopmentSignedVisionOS: 0x60000d45cd20> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodDeveloperID: 0x60000d45c200> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodDeveloperIDNotarizedApp: 0x60000d45cc50> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodSaveBuiltProducts: 0x60000d45c0b0> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodDevelopmentSignedMac: 0x60000d45c370> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodMacApplication: 0x60000d45c4c0> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodTVOSAppStoreValidation: 0x60000d45c0f0> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Accepted distribution method <IDEDistributionMethodiOSAppStoreValidation: 0x60000d45c1b0>
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodAppStoreValidationVisionOS: 0x60000d45cb00> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodMacAppStoreValidation: 0x60000d45cc20> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Rejected distribution method <IDEDistributionMethodExportArchive: 0x60000d45c3c0> because it doesn't support distributing archive
+2025-04-12 08:31:54 +0000  Available distribution methods: {(
+    <IDEDistributionMethodiOSAppStoreValidation: 0x60000d45c1b0>
+)}
+2025-04-12 08:31:55 +0000  IDEDistributionItem init <DVTFilePath:0x60001648fcc0:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app/Watch/powernap Watch App.app'>
+2025-04-12 08:31:55 +0000  IDEDistributionItem init <DVTFilePath:0x6000232ee940:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app'>
+2025-04-12 08:31:55 +0000  Set distributionItems on context: (
+    "<IDEDistributionItem: 0x6000232b4060; bundleID='com.michaellee.powernap', path='<DVTFilePath:0x6000232ee940:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31\U202fPM.xcarchive/Products/Applications/powernap.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x6000037fe490; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600006c7cfc0; name='Apple Development: a82052404@gmail.com (DW576443N8)', hash='EA9B54E7CE161B16A4BF747A4DAD1BC72A2EC3F2', serialNumber='12DECCE084D49529E9C43304267B5EF8', certificateKinds='(\n    \"1.2.840.113635.100.6.1.12\",\n    \"1.2.840.113635.100.6.1.2\"\n), issueDate='2025-03-17 13:00:40 +0000''>', entitlements='{\n    \"application-identifier\" = \"8BG6CPVQP5.com.michaellee.powernap\";\n    \"com.apple.developer.team-identifier\" = 8BG6CPVQP5;\n    \"get-task-allow\" = 1;\n}', teamID='8BG6CPVQP5', identifier='com.michaellee.powernap', executablePath='<DVTFilePath:0x6000232ed080:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31\U202fPM.xcarchive/Products/Applications/powernap.app/powernap'>', hardenedRuntime='0'>'>"
+)
+2025-04-12 08:31:55 +0000  Item /Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app doesn't have the entitlement com.apple.developer.web-browser-engine.host enabled, returning ["arm64e"]
+2025-04-12 08:31:55 +0000  Archs to thin for item /Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app are ["arm64e"]
+2025-04-12 08:31:55 +0000  Item /Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app/Watch/powernap Watch App.app doesn't have the entitlement com.apple.developer.web-browser-engine.host enabled, returning ["arm64e"]
+2025-04-12 08:31:55 +0000  Archs to thin for item /Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app/Watch/powernap Watch App.app are ["arm64e"]
+2025-04-12 08:31:55 +0000  [OPTIONAL] Found platform <DVTPlatform:0x600003874c00:'com.apple.platform.watchos':<DVTFilePath:0x600003d44a80:'/Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform'>> and cert <DVTSigningCertificate: 0x600006c7cfc0; name='Apple Development: a82052404@gmail.com (DW576443N8)', hash='EA9B54E7CE161B16A4BF747A4DAD1BC72A2EC3F2', serialNumber='12DECCE084D49529E9C43304267B5EF8', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2025-03-17 13:00:40 +0000''> for <DVTFilePath:0x60001648fcc0:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app/Watch/powernap Watch App.app'>
+2025-04-12 08:31:55 +0000  [OPTIONAL] Profile <DVTEmbeddedProvisioningProfile 0x600006c7cfc0: name: iOS Team Provisioning Profile: com.michaellee.powernap.watchkitapp, UUID: 02ea6178-b998-42ca-b1a2-e3a15f75214f, teamName: SZU HAN LEE, teamIdentifierPrefixes: (
+    8BG6CPVQP5
+), entitlements: {
+    "application-identifier" = "8BG6CPVQP5.com.michaellee.powernap.watchkitapp";
+    "com.apple.developer.healthkit" = 1;
+    "com.apple.developer.healthkit.access" =     (
+        "health-records"
+    );
+    "com.apple.developer.healthkit.background-delivery" = 1;
+    "com.apple.developer.team-identifier" = 8BG6CPVQP5;
+    "get-task-allow" = 1;
+    "keychain-access-groups" =     (
+        "8BG6CPVQP5.*",
+        "com.apple.token"
+    );
+}, appIdentifierName: XC com michaellee powernap watchkitapp, applicationIdentifierPrefixes: (
+    8BG6CPVQP5
+), dateCreated: 2025-04-08 12:36:02 +0000, dateExpired: 2026-04-08 12:36:02 +0000, certificateKinds: {(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+)}, certificateSHA1Hashes: {(
+    EA9B54E7CE161B16A4BF747A4DAD1BC72A2EC3F2
+)}, supportedUDIDs: {(
+    "00008310-00190ad90e84a01e",
+    041e35d3991e90023301135009325901039afd8c
+)}, isUniversal: 0, isXcodeManaged: 1, platforms: {(
+    <DVTPlatform:0x600003874d00:'com.apple.platform.xros':<DVTFilePath:0x600003241920:'/Applications/Xcode.app/Contents/Developer/Platforms/XROS.platform'>>,
+    <DVTPlatform:0x600003874c00:'com.apple.platform.watchos':<DVTFilePath:0x600003d44a80:'/Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform'>>,
+    <DVTPlatform:0x600003874b80:'com.apple.platform.iphoneos':<DVTFilePath:0x600003d449a0:'/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>
+)}, filePath: <DVTFilePath:0x600013ea8f50:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app/Watch/powernap Watch App.app/embedded.mobileprovision'>> for <DVTFilePath:0x60001648fcc0:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app/Watch/powernap Watch App.app'> was an automatic profile
+2025-04-12 08:31:55 +0000  Distributable's provisioning style is Automatic
+2025-04-12 08:31:55 +0000  App Store Connect request for store configuration response: <DVTITunesConnectConfigurationResponse: 0x60000034bec0; isSuccessful='1', configuration='{
+    8BG6CPVQP5 =     {
+        "com.apple.platform.appletvos" =         {
+            architectures =             {
+                defaultArch =                 {
+                    defaultProductType =                     {
+                        format =                         {
+                            bitCode =                             {
+                                supportLevel = unsupported;
+                            };
+                            compiledCode =                             {
+                                supportLevel = required;
+                            };
+                        };
+                    };
+                };
+            };
+            iconSource =             {
+                largeAppIcon = carInBinary;
+                primaryIcons = carInBinary;
+            };
+            onDemandResources =             {
+                sizeLimits =                 {
+                    assetPack = 512000000;
+                    prioritizedTotal = 2000000000;
+                    total = 20000000000;
+                };
+                supportLevel = supported;
+            };
+        };
+        "com.apple.platform.iphoneos" =         {
+            architectures =             {
+                defaultArch =                 {
+                    defaultProductType =                     {
+                        format =                         {
+                            bitCode =                             {
+                                supportLevel = unsupported;
+                            };
+                            compiledCode =                             {
+                                supportLevel = required;
+                            };
+                        };
+                    };
+                };
+            };
+            iconSource =             {
+                largeAppIcon = unsupported;
+                primaryIcons = pngInBinary;
+            };
+            onDemandResources =             {
+                sizeLimits =                 {
+                    assetPack = 512000000;
+                    total = 20000000000;
+                };
+                supportLevel = supported;
+            };
+        };
+        "com.apple.platform.macosx" =         {
+            architectures =             {
+                defaultArch =                 {
+                    defaultProductType =                     {
+                        format =                         {
+                            bitCode =                             {
+                                supportLevel = unsupported;
+                            };
+                            compiledCode =                             {
+                                supportLevel = required;
+                            };
+                        };
+                    };
+                };
+            };
+            iconSource =             {
+                largeAppIcon = pngInBinary;
+                primaryIcons = pngInBinary;
+            };
+            onDemandResources =             {
+                supportLevel = unsupported;
+            };
+        };
+        "com.apple.platform.watchos" =         {
+            architectures =             {
+                defaultArch =                 {
+                    defaultProductType =                     {
+                        format =                         {
+                            bitCode =                             {
+                                supportLevel = unsupported;
+                            };
+                            compiledCode =                             {
+                                supportLevel = required;
+                            };
+                        };
+                    };
+                };
+            };
+            iconSource =             {
+                largeAppIcon = unsupported;
+                primaryIcons = pngInBinary;
+            };
+            onDemandResources =             {
+                supportLevel = unsupported;
+            };
+        };
+        "com.apple.platform.xros" =         {
+            architectures =             {
+                defaultArch =                 {
+                    defaultProductType =                     {
+                        format =                         {
+                            bitCode =                             {
+                                supportLevel = unsupported;
+                            };
+                            compiledCode =                             {
+                                supportLevel = required;
+                            };
+                        };
+                    };
+                };
+            };
+            iconSource =             {
+                largeAppIcon = carInBinary;
+                primaryIcons = carInBinary;
+            };
+            onDemandResources =             {
+                supportLevel = unsupported;
+            };
+        };
+        configModelVersion = "1.1";
+    };
+    preflight =     (
+        8BG6CPVQP5
+    );
+}', alertMessage='(null)', errors='(null)', warnings='(null)', infoMessages='(null)'>
+2025-04-12 08:31:55 +0000  App Store Connect team IDs for account (null) are (
+    8BG6CPVQP5
+)
+2025-04-12 08:31:59 +0000  Starting evaluation for distribution items:
+(
+    "<IDEDistributionItem: 0x6000232b4060; bundleID='com.michaellee.powernap', path='<DVTFilePath:0x6000232ee940:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31\U202fPM.xcarchive/Products/Applications/powernap.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x6000037fe490; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600006c68000; name='Apple Development: a82052404@gmail.com (DW576443N8)', hash='EA9B54E7CE161B16A4BF747A4DAD1BC72A2EC3F2', serialNumber='12DECCE084D49529E9C43304267B5EF8', certificateKinds='(\n    \"1.2.840.113635.100.6.1.12\",\n    \"1.2.840.113635.100.6.1.2\"\n), issueDate='2025-03-17 13:00:40 +0000''>', entitlements='{\n    \"application-identifier\" = \"8BG6CPVQP5.com.michaellee.powernap\";\n    \"com.apple.developer.team-identifier\" = 8BG6CPVQP5;\n    \"get-task-allow\" = 1;\n}', teamID='8BG6CPVQP5', identifier='com.michaellee.powernap', executablePath='<DVTFilePath:0x6000232ed080:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31\U202fPM.xcarchive/Products/Applications/powernap.app/powernap'>', hardenedRuntime='0'>'>"
+)
+2025-04-12 08:31:59 +0000 [MT] Evaluating <IDEDistributionItemProvisionable: 0x60000f9c8c00; distributionItem='<IDEDistributionItem: 0x6000232b6640; bundleID='com.michaellee.powernap.watchkitapp', path='<DVTFilePath:0x60001648fcc0:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app/Watch/powernap Watch App.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x6000030e17c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600006c418c0; name='Apple Development: a82052404@gmail.com (DW576443N8)', hash='EA9B54E7CE161B16A4BF747A4DAD1BC72A2EC3F2', serialNumber='12DECCE084D49529E9C43304267B5EF8', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2025-03-17 13:00:40 +0000''>', entitlements='{
+    "application-identifier" = "8BG6CPVQP5.com.michaellee.powernap.watchkitapp";
+    "com.apple.developer.healthkit" = 1;
+    "com.apple.developer.healthkit.background-delivery" = 1;
+    "com.apple.developer.team-identifier" = 8BG6CPVQP5;
+    "get-task-allow" = 1;
+}', teamID='8BG6CPVQP5', identifier='com.michaellee.powernap.watchkitapp', executablePath='<DVTFilePath:0x60000b85a100:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app/Watch/powernap Watch App.app/powernap Watch App'>', hardenedRuntime='0'>'>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x6000103d3c80; teamID='8BG6CPVQP5', teamName='SZU HAN LEE', teamType='Individual', username='a82052404@gmail.com', isFreeProvisioningTeam='0'>', method='<IDEDistributionMethodiOSAppStoreValidation: 0x60000d45c1b0>', provisioningStyle='0', entitlementsProcessors='(
+    "<IDEiCloudEntitlementsProcessor: 0x60001597b900>",
+    "<IDEAppAttestEnvironmentEntitlementsProcessor: 0x60001597a460>",
+    "<IDEClassKitEntitlementsProcessor: 0x600015936220>",
+    "<IDEAppIdentifierPrefixedEntitlementsProcessor: 0x6000159b3720>"
+)'> with overrides <IDEProvisionableOverrides 0x6000021edfa0: configuration: Default, profileSupport: <IDEProvisioningProfileSupport: 0x60000d4463c0>, provisioningStyle: (null), certificateSigningStyle: (null), provisioningPurpose: app-store, team: (null), platform: <DVTPlatform:0x600003874c00:'com.apple.platform.watchos':<DVTFilePath:0x600003d44a80:'/Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform'>>, sdk: (null), sdkVariant: (null), profileSpecifier: (null), certificateIdentifier: (null), bundleIdentifier: (null), entitlements: (null), entitlementsFile: (null), baseEntitlements: (null), entitlementsExpansion: (null), entitlementsDestination: (null), allowSigningWithoutTeamSelection: (null), signingRequiresTeam: (null), appIDFeatures: (null)>
+2025-04-12 08:31:59 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x6000232b6640; bundleID='com.michaellee.powernap.watchkitapp', path='<DVTFilePath:0x60001648fcc0:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app/Watch/powernap Watch App.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x6000030e17c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600006c42940; name='Apple Development: a82052404@gmail.com (DW576443N8)', hash='EA9B54E7CE161B16A4BF747A4DAD1BC72A2EC3F2', serialNumber='12DECCE084D49529E9C43304267B5EF8', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2025-03-17 13:00:40 +0000''>', entitlements='{
+    "application-identifier" = "8BG6CPVQP5.com.michaellee.powernap.watchkitapp";
+    "com.apple.developer.healthkit" = 1;
+    "com.apple.developer.healthkit.background-delivery" = 1;
+    "com.apple.developer.team-identifier" = 8BG6CPVQP5;
+    "get-task-allow" = 1;
+}', teamID='8BG6CPVQP5', identifier='com.michaellee.powernap.watchkitapp', executablePath='<DVTFilePath:0x60000b85a100:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app/Watch/powernap Watch App.app/powernap Watch App'>', hardenedRuntime='0'>'> from <IDEiCloudEntitlementsProcessor: 0x60001597b900>: {
+}
+2025-04-12 08:31:59 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x6000232b6640; bundleID='com.michaellee.powernap.watchkitapp', path='<DVTFilePath:0x60001648fcc0:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app/Watch/powernap Watch App.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x6000030e17c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600006c6b240; name='Apple Development: a82052404@gmail.com (DW576443N8)', hash='EA9B54E7CE161B16A4BF747A4DAD1BC72A2EC3F2', serialNumber='12DECCE084D49529E9C43304267B5EF8', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2025-03-17 13:00:40 +0000''>', entitlements='{
+    "application-identifier" = "8BG6CPVQP5.com.michaellee.powernap.watchkitapp";
+    "com.apple.developer.healthkit" = 1;
+    "com.apple.developer.healthkit.background-delivery" = 1;
+    "com.apple.developer.team-identifier" = 8BG6CPVQP5;
+    "get-task-allow" = 1;
+}', teamID='8BG6CPVQP5', identifier='com.michaellee.powernap.watchkitapp', executablePath='<DVTFilePath:0x60000b85a100:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app/Watch/powernap Watch App.app/powernap Watch App'>', hardenedRuntime='0'>'> from <IDEAppAttestEnvironmentEntitlementsProcessor: 0x60001597a460>: {
+}
+2025-04-12 08:31:59 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x6000232b6640; bundleID='com.michaellee.powernap.watchkitapp', path='<DVTFilePath:0x60001648fcc0:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app/Watch/powernap Watch App.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x6000030e17c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600006c424c0; name='Apple Development: a82052404@gmail.com (DW576443N8)', hash='EA9B54E7CE161B16A4BF747A4DAD1BC72A2EC3F2', serialNumber='12DECCE084D49529E9C43304267B5EF8', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2025-03-17 13:00:40 +0000''>', entitlements='{
+    "application-identifier" = "8BG6CPVQP5.com.michaellee.powernap.watchkitapp";
+    "com.apple.developer.healthkit" = 1;
+    "com.apple.developer.healthkit.background-delivery" = 1;
+    "com.apple.developer.team-identifier" = 8BG6CPVQP5;
+    "get-task-allow" = 1;
+}', teamID='8BG6CPVQP5', identifier='com.michaellee.powernap.watchkitapp', executablePath='<DVTFilePath:0x60000b85a100:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app/Watch/powernap Watch App.app/powernap Watch App'>', hardenedRuntime='0'>'> from <IDEClassKitEntitlementsProcessor: 0x600015936220>: {
+}
+2025-04-12 08:31:59 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x6000232b6640; bundleID='com.michaellee.powernap.watchkitapp', path='<DVTFilePath:0x60001648fcc0:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app/Watch/powernap Watch App.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x6000030e17c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600006c42880; name='Apple Development: a82052404@gmail.com (DW576443N8)', hash='EA9B54E7CE161B16A4BF747A4DAD1BC72A2EC3F2', serialNumber='12DECCE084D49529E9C43304267B5EF8', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2025-03-17 13:00:40 +0000''>', entitlements='{
+    "application-identifier" = "8BG6CPVQP5.com.michaellee.powernap.watchkitapp";
+    "com.apple.developer.healthkit" = 1;
+    "com.apple.developer.healthkit.background-delivery" = 1;
+    "com.apple.developer.team-identifier" = 8BG6CPVQP5;
+    "get-task-allow" = 1;
+}', teamID='8BG6CPVQP5', identifier='com.michaellee.powernap.watchkitapp', executablePath='<DVTFilePath:0x60000b85a100:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app/Watch/powernap Watch App.app/powernap Watch App'>', hardenedRuntime='0'>'> from <IDEAppIdentifierPrefixedEntitlementsProcessor: 0x6000159b3720>: {
+    "application-identifier" = "$(AppIdentifierPrefix)com.michaellee.powernap.watchkitapp";
+}
+2025-04-12 08:31:59 +0000 [MT] Evaluating <IDEDistributionItemProvisionable: 0x60000f9cb780; distributionItem='<IDEDistributionItem: 0x6000232b4060; bundleID='com.michaellee.powernap', path='<DVTFilePath:0x6000232ee940:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x6000037fe490; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600006c403c0; name='Apple Development: a82052404@gmail.com (DW576443N8)', hash='EA9B54E7CE161B16A4BF747A4DAD1BC72A2EC3F2', serialNumber='12DECCE084D49529E9C43304267B5EF8', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2025-03-17 13:00:40 +0000''>', entitlements='{
+    "application-identifier" = "8BG6CPVQP5.com.michaellee.powernap";
+    "com.apple.developer.team-identifier" = 8BG6CPVQP5;
+    "get-task-allow" = 1;
+}', teamID='8BG6CPVQP5', identifier='com.michaellee.powernap', executablePath='<DVTFilePath:0x6000232ed080:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app/powernap'>', hardenedRuntime='0'>'>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x6000103d3c80; teamID='8BG6CPVQP5', teamName='SZU HAN LEE', teamType='Individual', username='a82052404@gmail.com', isFreeProvisioningTeam='0'>', method='<IDEDistributionMethodiOSAppStoreValidation: 0x60000d45c1b0>', provisioningStyle='0', entitlementsProcessors='(
+    "<IDEiCloudEntitlementsProcessor: 0x600015978ed0>",
+    "<IDEAppAttestEnvironmentEntitlementsProcessor: 0x600015979080>",
+    "<IDEClassKitEntitlementsProcessor: 0x600015963de0>",
+    "<IDEAppIdentifierPrefixedEntitlementsProcessor: 0x600015989f50>"
+)'> with overrides <IDEProvisionableOverrides 0x6000021ef860: configuration: Default, profileSupport: <IDEProvisioningProfileSupport: 0x60000d4434e0>, provisioningStyle: (null), certificateSigningStyle: (null), provisioningPurpose: app-store, team: (null), platform: <DVTPlatform:0x600003874b80:'com.apple.platform.iphoneos':<DVTFilePath:0x600003d449a0:'/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>, sdk: (null), sdkVariant: (null), profileSpecifier: (null), certificateIdentifier: (null), bundleIdentifier: (null), entitlements: (null), entitlementsFile: (null), baseEntitlements: (null), entitlementsExpansion: (null), entitlementsDestination: (null), allowSigningWithoutTeamSelection: (null), signingRequiresTeam: (null), appIDFeatures: (null)>
+2025-04-12 08:31:59 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x6000232b4060; bundleID='com.michaellee.powernap', path='<DVTFilePath:0x6000232ee940:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x6000037fe490; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x6000023b1f80; name='Apple Development: a82052404@gmail.com (DW576443N8)', hash='EA9B54E7CE161B16A4BF747A4DAD1BC72A2EC3F2', serialNumber='12DECCE084D49529E9C43304267B5EF8', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2025-03-17 13:00:40 +0000''>', entitlements='{
+    "application-identifier" = "8BG6CPVQP5.com.michaellee.powernap";
+    "com.apple.developer.team-identifier" = 8BG6CPVQP5;
+    "get-task-allow" = 1;
+}', teamID='8BG6CPVQP5', identifier='com.michaellee.powernap', executablePath='<DVTFilePath:0x6000232ed080:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app/powernap'>', hardenedRuntime='0'>'> from <IDEiCloudEntitlementsProcessor: 0x600015978ed0>: {
+}
+2025-04-12 08:31:59 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x6000232b4060; bundleID='com.michaellee.powernap', path='<DVTFilePath:0x6000232ee940:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x6000037fe490; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x6000023b2340; name='Apple Development: a82052404@gmail.com (DW576443N8)', hash='EA9B54E7CE161B16A4BF747A4DAD1BC72A2EC3F2', serialNumber='12DECCE084D49529E9C43304267B5EF8', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2025-03-17 13:00:40 +0000''>', entitlements='{
+    "application-identifier" = "8BG6CPVQP5.com.michaellee.powernap";
+    "com.apple.developer.team-identifier" = 8BG6CPVQP5;
+    "get-task-allow" = 1;
+}', teamID='8BG6CPVQP5', identifier='com.michaellee.powernap', executablePath='<DVTFilePath:0x6000232ed080:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app/powernap'>', hardenedRuntime='0'>'> from <IDEAppAttestEnvironmentEntitlementsProcessor: 0x600015979080>: {
+}
+2025-04-12 08:31:59 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x6000232b4060; bundleID='com.michaellee.powernap', path='<DVTFilePath:0x6000232ee940:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x6000037fe490; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x6000023b06c0; name='Apple Development: a82052404@gmail.com (DW576443N8)', hash='EA9B54E7CE161B16A4BF747A4DAD1BC72A2EC3F2', serialNumber='12DECCE084D49529E9C43304267B5EF8', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2025-03-17 13:00:40 +0000''>', entitlements='{
+    "application-identifier" = "8BG6CPVQP5.com.michaellee.powernap";
+    "com.apple.developer.team-identifier" = 8BG6CPVQP5;
+    "get-task-allow" = 1;
+}', teamID='8BG6CPVQP5', identifier='com.michaellee.powernap', executablePath='<DVTFilePath:0x6000232ed080:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app/powernap'>', hardenedRuntime='0'>'> from <IDEClassKitEntitlementsProcessor: 0x600015963de0>: {
+}
+2025-04-12 08:31:59 +0000 [MT] Applying entitlements delta for <IDEDistributionItem: 0x6000232b4060; bundleID='com.michaellee.powernap', path='<DVTFilePath:0x6000232ee940:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x6000037fe490; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x600006c17e40; name='Apple Development: a82052404@gmail.com (DW576443N8)', hash='EA9B54E7CE161B16A4BF747A4DAD1BC72A2EC3F2', serialNumber='12DECCE084D49529E9C43304267B5EF8', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2025-03-17 13:00:40 +0000''>', entitlements='{
+    "application-identifier" = "8BG6CPVQP5.com.michaellee.powernap";
+    "com.apple.developer.team-identifier" = 8BG6CPVQP5;
+    "get-task-allow" = 1;
+}', teamID='8BG6CPVQP5', identifier='com.michaellee.powernap', executablePath='<DVTFilePath:0x6000232ed080:'/Users/michaellee/Library/Developer/Xcode/Archives/2025-04-12/powernap Watch App 4-12-25, 4.31 PM.xcarchive/Products/Applications/powernap.app/powernap'>', hardenedRuntime='0'>'> from <IDEAppIdentifierPrefixedEntitlementsProcessor: 0x600015989f50>: {
+    "application-identifier" = "$(AppIdentifierPrefix)com.michaellee.powernap";
+}
+2025-04-12 08:32:00 +0000 [MT] Evaluation for powernap Watch App.app is <IDEProvisionableStatusEvaluation 0x600013eace70: inputs: <IDEProvisionableStatusEvalutorInputs 0x600000c96a80: provisionableSnapshot: <IDEProvisionableSnapshot 0x600015a78cf0: name: powernap Watch App.app, configurations: {
+    Default = "<_IDEProvisionableConfigurationSnapshot 0x60001a709c20: name: Default, provisioningStyle: 0, certificateSigningStyle: 2, team: <IDEProvisioningDisambiguatableBasicTeam: 0x6000103d3c80; teamID='8BG6CPVQP5', teamName='SZU HAN LEE', teamType='Individual', username='a82052404@gmail.com', isFreeProvisioningTeam='0'>, profileSupport: <IDEProvisioningProfileSupport: 0x6000094897c0>, platform: <DVTPlatform:0x600003874c00:'com.apple.platform.watchos':<DVTFilePath:0x600003d44a80:'/Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform'>>, sdk: (null), sdkVariant: (null), bundleIdentifier: com.michaellee.powernap.watchkitapp, profileSpecifier: (null), certificateIdentifier: iPhone Distribution, entitlementsFilePath: (null), baseEntitlements: <IDEProvisionableEntitlements: 0x600005027640; signedEntitlements='{\n    \"application-identifier\" = \"$(AppIdentifierPrefix)com.michaellee.powernap.watchkitapp\";\n    \"com.apple.developer.healthkit\" = 1;\n    \"com.apple.developer.healthkit.background-delivery\" = 1;\n    \"com.apple.developer.team-identifier\" = 8BG6CPVQP5;\n}', simulatedEntitlements='(null)'>, entitlementsExpansion: <IDEDistributionProvisioningEntitlementsExpansion: 0x600009488a90>, entitlementsDestination: 1, allowSigningWithoutTeamSelection: 0, signingRequiresTeam: 0, appIDFeatures: <DVTPortalAppIDFeatures 0x6000050c7d80: Features: {\n    \"<DVTPortalProfileFeature: 0x60000f3ca040; id='HEALTHKIT', userDescription='HealthKit', platforms='.xros, .watchos, .iphoneos'>\" = 1;\n}, Containers: {\n}>, provisioningPurpose: app-store, supportsIOSMac: 0>";
+}, overrides: <IDEProvisionableOverrides 0x6000021edfa0: configuration: Default, profileSupport: <IDEProvisioningProfileSupport: 0x60000d4463c0>, provisioningStyle: (null), certificateSigningStyle: (null), provisioningPurpose: app-store, team: (null), platform: <DVTPlatform:0x600003874c00:'com.apple.platform.watchos':<DVTFilePath:0x600003d44a80:'/Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform'>>, sdk: (null), sdkVariant: (null), profileSpecifier: (null), certificateIdentifier: (null), bundleIdentifier: (null), entitlements: (null), entitlementsFile: (null), baseEntitlements: (null), entitlementsExpansion: (null), entitlementsDestination: (null), allowSigningWithoutTeamSelection: (null), signingRequiresTeam: (null), appIDFeatures: (null)>>>, configuration: Default, codesignParameterSnapshot: <IDECodesignParameterSnapshot: 0x600015a400f0>:
+Profile:  <DVTEmbeddedProvisioningProfile 0x600002309740: name: iOS Team Store Provisioning Profile: com.michaellee.powernap.watchkitapp, UUID: 280cbcf6-59cb-4a8e-86fe-4d557bda403e, teamName: SZU HAN LEE, teamIdentifierPrefixes: (
+    8BG6CPVQP5
+), entitlements: {
+    "application-identifier" = "8BG6CPVQP5.com.michaellee.powernap.watchkitapp";
+    "aps-environment" = production;
+    "beta-reports-active" = 1;
+    "com.apple.developer.healthkit" = 1;
+    "com.apple.developer.healthkit.access" =     (
+        "health-records"
+    );
+    "com.apple.developer.healthkit.background-delivery" = 1;
+    "com.apple.developer.team-identifier" = 8BG6CPVQP5;
+    "get-task-allow" = 0;
+    "keychain-access-groups" =     (
+        "8BG6CPVQP5.*",
+        "com.apple.token"
+    );
+}, appIdentifierName: XC com michaellee powernap watchkitapp, applicationIdentifierPrefixes: (
+    8BG6CPVQP5
+), dateCreated: 2025-04-09 13:26:05 +0000, dateExpired: 2026-04-09 13:16:03 +0000, certificateKinds: {(
+    "1.2.840.113635.100.6.1.7",
+    "1.2.840.113635.100.6.1.4"
+)}, certificateSHA1Hashes: {(
+    BB5E266F3EB71436A79DB7AB236580D3DC400943,
+    96C85FDE1AC5059520A3B4702CBCF9DC9B4DAC8B
+)}, supportedUDIDs: {(
+)}, isUniversal: 0, isXcodeManaged: 1, platforms: {(
+    <DVTPlatform:0x600003874d00:'com.apple.platform.xros':<DVTFilePath:0x600003241920:'/Applications/Xcode.app/Contents/Developer/Platforms/XROS.platform'>>,
+    <DVTPlatform:0x600003874c00:'com.apple.platform.watchos':<DVTFilePath:0x600003d44a80:'/Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform'>>,
+    <DVTPlatform:0x600003874b80:'com.apple.platform.iphoneos':<DVTFilePath:0x600003d449a0:'/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>
+)}, filePath: <DVTFilePath:0x600002517a80:'/Users/michaellee/Library/Developer/Xcode/UserData/Provisioning Profiles/280cbcf6-59cb-4a8e-86fe-4d557bda403e.mobileprovision'>>
+Identity: BB5E266F3EB71436A79DB7AB236580D3DC400943
+Certificate <DVTSigningCertificate: 0x600002317240; name='iPhone Distribution: SZU HAN LEE (8BG6CPVQP5)', hash='BB5E266F3EB71436A79DB7AB236580D3DC400943', serialNumber='5E871B923FDBDB19B22418E59FDE5FA2', certificateKinds='(
+    "1.2.840.113635.100.6.1.4"
+), issueDate='2025-04-08 14:15:36 +0000''>>, errors: (null)>
+2025-04-12 08:32:00 +0000 [MT] Evaluation for powernap.app is <IDEProvisionableStatusEvaluation 0x60000ff39960: inputs: <IDEProvisionableStatusEvalutorInputs 0x600000c93380: provisionableSnapshot: <IDEProvisionableSnapshot 0x600009bc5f80: name: powernap.app, configurations: {
+    Default = "<_IDEProvisionableConfigurationSnapshot 0x60001a709f40: name: Default, provisioningStyle: 0, certificateSigningStyle: 2, team: <IDEProvisioningDisambiguatableBasicTeam: 0x6000103d3c80; teamID='8BG6CPVQP5', teamName='SZU HAN LEE', teamType='Individual', username='a82052404@gmail.com', isFreeProvisioningTeam='0'>, profileSupport: <IDEProvisioningProfileSupport: 0x6000094884d0>, platform: <DVTPlatform:0x600003874b80:'com.apple.platform.iphoneos':<DVTFilePath:0x600003d449a0:'/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>, sdk: (null), sdkVariant: (null), bundleIdentifier: com.michaellee.powernap, profileSpecifier: (null), certificateIdentifier: iPhone Distribution, entitlementsFilePath: (null), baseEntitlements: <IDEProvisionableEntitlements: 0x6000050ce0e0; signedEntitlements='{\n    \"application-identifier\" = \"$(AppIdentifierPrefix)com.michaellee.powernap\";\n    \"com.apple.developer.team-identifier\" = 8BG6CPVQP5;\n}', simulatedEntitlements='(null)'>, entitlementsExpansion: <IDEDistributionProvisioningEntitlementsExpansion: 0x6000094899b0>, entitlementsDestination: 1, allowSigningWithoutTeamSelection: 0, signingRequiresTeam: 0, appIDFeatures: <DVTPortalAppIDFeatures 0x6000050ebbe0: Features: {\n}, Containers: {\n}>, provisioningPurpose: app-store, supportsIOSMac: 0>";
+}, overrides: <IDEProvisionableOverrides 0x6000021ef860: configuration: Default, profileSupport: <IDEProvisioningProfileSupport: 0x60000d4434e0>, provisioningStyle: (null), certificateSigningStyle: (null), provisioningPurpose: app-store, team: (null), platform: <DVTPlatform:0x600003874b80:'com.apple.platform.iphoneos':<DVTFilePath:0x600003d449a0:'/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>, sdk: (null), sdkVariant: (null), profileSpecifier: (null), certificateIdentifier: (null), bundleIdentifier: (null), entitlements: (null), entitlementsFile: (null), baseEntitlements: (null), entitlementsExpansion: (null), entitlementsDestination: (null), allowSigningWithoutTeamSelection: (null), signingRequiresTeam: (null), appIDFeatures: (null)>>>, configuration: Default, codesignParameterSnapshot: <IDECodesignParameterSnapshot: 0x600015a6aa90>:
+Profile:  <DVTEmbeddedProvisioningProfile 0x600002309380: name: iOS Team Store Provisioning Profile: com.michaellee.powernap, UUID: f987644f-0bb1-4de9-8c71-8bd9b3351ab1, teamName: SZU HAN LEE, teamIdentifierPrefixes: (
+    8BG6CPVQP5
+), entitlements: {
+    "application-identifier" = "8BG6CPVQP5.com.michaellee.powernap";
+    "aps-environment" = production;
+    "beta-reports-active" = 1;
+    "com.apple.developer.team-identifier" = 8BG6CPVQP5;
+    "get-task-allow" = 0;
+    "keychain-access-groups" =     (
+        "8BG6CPVQP5.*",
+        "com.apple.token"
+    );
+}, appIdentifierName: XC com michaellee powernap, applicationIdentifierPrefixes: (
+    8BG6CPVQP5
+), dateCreated: 2025-04-09 13:26:07 +0000, dateExpired: 2026-04-09 13:16:03 +0000, certificateKinds: {(
+    "1.2.840.113635.100.6.1.7",
+    "1.2.840.113635.100.6.1.4"
+)}, certificateSHA1Hashes: {(
+    BB5E266F3EB71436A79DB7AB236580D3DC400943,
+    96C85FDE1AC5059520A3B4702CBCF9DC9B4DAC8B
+)}, supportedUDIDs: {(
+)}, isUniversal: 0, isXcodeManaged: 1, platforms: {(
+    <DVTPlatform:0x600003874d00:'com.apple.platform.xros':<DVTFilePath:0x600003241920:'/Applications/Xcode.app/Contents/Developer/Platforms/XROS.platform'>>,
+    <DVTPlatform:0x600003874c00:'com.apple.platform.watchos':<DVTFilePath:0x600003d44a80:'/Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform'>>,
+    <DVTPlatform:0x600003874b80:'com.apple.platform.iphoneos':<DVTFilePath:0x600003d449a0:'/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>
+)}, filePath: <DVTFilePath:0x600002517960:'/Users/michaellee/Library/Developer/Xcode/UserData/Provisioning Profiles/f987644f-0bb1-4de9-8c71-8bd9b3351ab1.mobileprovision'>>
+Identity: BB5E266F3EB71436A79DB7AB236580D3DC400943
+Certificate <DVTSigningCertificate: 0x600002317240; name='iPhone Distribution: SZU HAN LEE (8BG6CPVQP5)', hash='BB5E266F3EB71436A79DB7AB236580D3DC400943', serialNumber='5E871B923FDBDB19B22418E59FDE5FA2', certificateKinds='(
+    "1.2.840.113635.100.6.1.4"
+), issueDate='2025-04-08 14:15:36 +0000''>>, errors: (null)>
+2025-04-12 08:32:01 +0000  Validating powernap Watch App
+2025-04-12 08:32:25 +0000  Distribution record info for archive: <IDEArchiveDistributionRecord: 0x600006c70240; task='1', distributionDestination='2', uploadDestination='1', teamID='8BG6CPVQP5', signingCertificateSHA1='BB5E266F3EB71436A79DB7AB236580D3DC400943', uniqueIdentifier='d7981973-a1b5-477b-9b07-60eb8d24b5dc', packagePath='(null)', preparationEvent='<IDEArchiveDistributionEvent: 0x6000030da850; title='Prepared archive for validation', shortTitle='Prepared', date='2025-04-12 08:31:53 +0000', errors='(
+)', warnings='(
+)', infoMessages='(
+)', state='2'>', uploadEvent='(null)', validationEvent='<IDEArchiveDistributionEvent: 0x6000030da0d0; title='Validation failed', shortTitle='Validation failed', date='2025-04-12 08:32:25 +0000', errors='(
+    "Error Domain=ContentDelivery Code=409 \"Validation failed\" UserInfo={IDEDistributionIssueSeverity=3, NSLocalizedDescription=Validation failed, NSLocalizedRecoverySuggestion=Invalid Bundle. The watch app 'powernap.app/Watch/powernap Watch App.app' cannot contain the 'WKCompanionAppBundleIdentifier' Info.plist key if its watch extension has the 'WKWatchOnly' Info.plist key set to 'true'. (ID: 5fc9a480-9fa5-40ac-97ec-aaa531002bd1)}"
+)', warnings='(
+)', infoMessages='(
+)', state='5'>', processingCompletedEvent='(null)'>
+2025-04-12 08:32:25 +0000  Step failed: <IDEDistributionResultStep: 0x6000050dc140>: Error Domain=IDEDistributionResultStepErrorDomain Code=-1 "Validation failed with errors" UserInfo={NSLocalizedDescription=Validation failed with errors, IDEDistributionUnderlyingErrors=(
+    "Error Domain=ContentDelivery Code=409 \"error: Validation failed. Invalid Bundle. The watch app 'powernap.app/Watch/powernap Watch App.app' cannot contain the 'WKCompanionAppBundleIdentifier' Info.plist key if its watch extension has the 'WKWatchOnly' Info.plist key set to 'true'. (ID: 5fc9a480-9fa5-40ac-97ec-aaa531002bd1).\" UserInfo={NSLocalizedDescription=error: Validation failed. Invalid Bundle. The watch app 'powernap.app/Watch/powernap Watch App.app' cannot contain the 'WKCompanionAppBundleIdentifier' Info.plist key if its watch extension has the 'WKWatchOnly' Info.plist key set to 'true'. (ID: 5fc9a480-9fa5-40ac-97ec-aaa531002bd1).}"
+)}
+2025-04-12 08:32:25 +0000 [MT] Displaying Validation result for archive powernap Watch App

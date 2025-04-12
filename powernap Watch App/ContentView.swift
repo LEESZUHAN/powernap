@@ -14,6 +14,8 @@ import Foundation
 
 struct ContentView: View {
     @StateObject private var viewModel = PowerNapViewModel()
+    @EnvironmentObject private var permissionManager: PermissionManager
+    @State private var showPermissionReminder = false
     
     var body: some View {
         TabView {
@@ -31,6 +33,34 @@ struct ContentView: View {
                 .tabItem {
                     Label("設置", systemImage: "gear")
                 }
+        }
+        .onAppear {
+            // 檢查權限狀態
+            Task {
+                await permissionManager.checkHealthPermissions()
+                if permissionManager.shouldShowPermissionReminder() {
+                    showPermissionReminder = true
+                }
+            }
+        }
+        // 顯示歡迎引導視圖
+        .fullScreenCover(isPresented: .init(
+            get: { !permissionManager.hasCompletedOnboarding },
+            set: { _ in }
+        )) {
+            WelcomeView(
+                permissionManager: permissionManager,
+                onComplete: {
+                    permissionManager.completeOnboarding()
+                }
+            )
+        }
+        // 顯示權限提醒彈窗
+        .sheet(isPresented: $showPermissionReminder) {
+            PermissionReminderView(
+                permissionManager: permissionManager,
+                isPresented: $showPermissionReminder
+            )
         }
     }
 }
@@ -68,7 +98,7 @@ struct NapView: View {
             // 睡眠狀態指示器（如果啟用睡眠檢測）
             if viewModel.isSleepDetectionEnabled && viewModel.isSessionActive {
                 VStack(spacing: 6) {
-                    StatusRow(label: "HRV", value: viewModel.getHRVDescription(), icon: "waveform.path.ecg")
+                    StatusRow(label: "心率", value: viewModel.getHeartRateDescription(), icon: "waveform.path.ecg")
                     StatusRow(label: "動作", value: viewModel.getMotionDescription(), icon: "figure.walk")
                     StatusRow(label: "檢測", value: viewModel.getSleepDetectionStatus(), icon: "zzz")
                 }
@@ -179,18 +209,18 @@ struct StatsView: View {
         ScrollView {
             ScrollViewReader { proxy in
                 VStack(spacing: 16) {
-                    // HRV 數據
+                    // 心率數據
                     VStack(alignment: .leading, spacing: 8) {
-                        Text("心率變異性 (HRV)")
+                        Text("心率數據")
                             .font(.headline)
-                            .id("hrv_section")
+                            .id("hr_section")
                         
                         HStack {
                             VStack(alignment: .leading) {
-                                Text("基準值")
+                                Text("靜息心率")
                                     .font(.subheadline)
                                     .foregroundColor(.gray)
-                                Text("\(Int(viewModel.baselineHRV)) ms")
+                                Text("\(Int(viewModel.restingHeartRate)) bpm")
                                     .font(.title3)
                                     .fontWeight(.medium)
                             }
@@ -198,10 +228,10 @@ struct StatsView: View {
                             Spacer()
                             
                             VStack(alignment: .trailing) {
-                                Text("當前值")
+                                Text("當前心率")
                                     .font(.subheadline)
                                     .foregroundColor(.gray)
-                                Text("\(Int(viewModel.hrvValue)) ms")
+                                Text("\(Int(viewModel.heartRate)) bpm")
                                     .font(.title3)
                                     .fontWeight(.medium)
                             }
