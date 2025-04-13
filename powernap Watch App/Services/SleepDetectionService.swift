@@ -406,15 +406,19 @@ class SleepDetectionService: ObservableObject, @unchecked Sendable {
         return true
     }
     
-    /// 更新睡眠狀態
+    /// 更新睡眠狀態並發佈描述
     private func updateSleepState(_ state: SleepState, description: String) {
-        currentSleepState = state
-        sleepStateDescription = description
-    }
-    
-    /// 獲取可讀的睡眠狀態描述
-    var sleepStateDescription: String {
-        return currentSleepState.rawValue
+        if currentSleepState != state {
+            currentSleepState = state
+            lastStateChangeTime = Date()
+            timeInCurrentState = 0
+        } else {
+            timeInCurrentState = Date().timeIntervalSince(lastStateChangeTime)
+        }
+        
+        DispatchQueue.main.async {
+            self.sleepStateDescription = description
+        }
     }
     
     /// 獲取當前心率狀態的描述 - 使用優化閾值

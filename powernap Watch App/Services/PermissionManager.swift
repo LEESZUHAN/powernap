@@ -115,14 +115,34 @@ class PermissionManager: ObservableObject {
         #if os(watchOS)
         // 使用反射間接調用WKExtension，避免直接導入WatchKit
         if let extensionClass = NSClassFromString("WKExtension"),
-           let sharedMethod = class_getClassMethod(extensionClass, Selector(("shared"))),
-           let openURLMethod = class_getInstanceMethod(extensionClass, Selector(("openSystemURL:"))),
-           let sharedInstance = extensionClass.method_invoke(extensionClass, sharedMethod) {
-            
-            let openURLImp = method_getImplementation(openURLMethod)
-            typealias OpenURLFunction = @convention(c) (Any, Selector, URL) -> Void
-            let openURLFunc = unsafeBitCast(openURLImp, to: OpenURLFunction.self)
-            openURLFunc(sharedInstance, Selector(("openSystemURL:")), settingsURL)
+           let openURLMethod = class_getInstanceMethod(extensionClass, #selector(WKExtension.openSystemURL(_:))) { // 獲取實例方法
+
+            let sharedSelector = #selector(WKExtension.shared) // 獲取類方法的 Selector
+            // 調用輔助方法，傳遞 Selector
+            if let objcSharedExtension = method_invoke_ret(extensionClass, sharedSelector)?.takeUnretainedValue() as? NSObject {
+                
+                typealias OpenURLImp = @convention(c) (AnyObject, Selector, URL) -> Void
+                let openURLSel = #selector(WKExtension.openSystemURL(_:))
+                
+                // 獲取 openSystemURL 的實現
+                if let openURLImpPointer = class_getMethodImplementation(extensionClass, openURLSel) { // 修正：應該從實例獲取IMP，但反射較複雜，先嘗試直接從類獲取
+                    let openURLFunction = unsafeBitCast(openURLImpPointer, to: OpenURLImp.self)
+                    // 在獲取的共享實例上調用方法
+                    openURLFunction(objcSharedExtension, openURLSel, settingsURL)
+                } else {
+                     // 嘗試從實例獲取方法實現（更標準的方式）
+                    if let instanceMethodImp = class_getMethodImplementation(type(of: objcSharedExtension), openURLSel) {
+                        let openURLFunction = unsafeBitCast(instanceMethodImp, to: OpenURLImp.self)
+                        openURLFunction(objcSharedExtension, openURLSel, settingsURL)
+                    } else {
+                        print("無法獲取 openSystemURL 方法的實現")
+                    }
+                }
+            } else {
+                print("無法獲取 WKExtension 的共享實例")
+            }
+        } else {
+            print("無法獲取 WKExtension 類或 openSystemURL 方法")
         }
         #else
         // 非WatchOS環境下的處理
@@ -147,5 +167,17 @@ class PermissionManager: ObservableObject {
     /// 標記用戶已經被提醒
     func markUserReminded() {
         lastPermissionReminderDate = Date().timeIntervalSince1970
+    }
+
+    // 輔助方法，用於安全調用類方法並獲取返回值
+    private func method_invoke_ret(_ target: AnyClass, _ selector: Selector) -> Unmanaged<AnyObject>? {
+        guard let method = class_getClassMethod(target, selector) else {
+            print("無法獲取類方法: \(selector)")
+            return nil
+        }
+        let implementation = method_getImplementation(method)
+        typealias Function = @convention(c) (AnyClass, Selector) -> Unmanaged<AnyObject>?
+        let function = unsafeBitCast(implementation, to: Function.self)
+        return function(target, selector)
     }
 } 

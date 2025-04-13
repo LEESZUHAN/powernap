@@ -1,0 +1,45 @@
+
+Showing Recent Issues
+
+Prepare build
+error: Multiple commands produce '/Users/michaellee/Library/Developer/Xcode/DerivedData/powernap-andpvffqpuvbpydqtebjncivjmxc/Build/Intermediates.noindex/powernap.build/Debug-watchsimulator/powernap Watch App.build/Objects-normal/arm64/SettingsView.stringsdata'
+    note: Target 'powernap Watch App' (project 'powernap') has Swift tasks not blocking downstream targets
+    note: Target 'powernap Watch App' (project 'powernap') has Swift tasks not blocking downstream targets
+error: Multiple commands produce '/Users/michaellee/Library/Developer/Xcode/DerivedData/powernap-andpvffqpuvbpydqtebjncivjmxc/Build/Intermediates.noindex/powernap.build/Debug-watchsimulator/powernap Watch App.build/Objects-normal/arm64/PermissionManager.stringsdata'
+    note: Target 'powernap Watch App' (project 'powernap') has Swift tasks not blocking downstream targets
+    note: Target 'powernap Watch App' (project 'powernap') has Swift tasks not blocking downstream targets
+error: Multiple commands produce '/Users/michaellee/Library/Developer/Xcode/DerivedData/powernap-andpvffqpuvbpydqtebjncivjmxc/Build/Intermediates.noindex/powernap.build/Debug-watchsimulator/powernap Watch App.build/Objects-normal/arm64/PermissionReminderView.stringsdata'
+    note: Target 'powernap Watch App' (project 'powernap') has Swift tasks not blocking downstream targets
+    note: Target 'powernap Watch App' (project 'powernap') has Swift tasks not blocking downstream targets
+error: Multiple commands produce '/Users/michaellee/Library/Developer/Xcode/DerivedData/powernap-andpvffqpuvbpydqtebjncivjmxc/Build/Intermediates.noindex/powernap.build/Debug-watchsimulator/powernap Watch App.build/Objects-normal/arm64/MotionService.stringsdata'
+    note: Target 'powernap Watch App' (project 'powernap') has Swift tasks not blocking downstream targets
+    note: Target 'powernap Watch App' (project 'powernap') has Swift tasks not blocking downstream targets
+
+
+Multiple commands produce '/Users/michaellee/Library/Developer/Xcode/DerivedData/powernap-andpvffqpuvbpydqtebjncivjmxc/Build/Intermediates.noindex/powernap.build/Debug-watchsimulator/powernap Watch App.build/Objects-normal/arm64/SettingsView.stringsdata'
+
+Multiple commands produce '/Users/michaellee/Library/Developer/Xcode/DerivedData/powernap-andpvffqpuvbpydqtebjncivjmxc/Build/Intermediates.noindex/powernap.build/Debug-watchsimulator/powernap Watch App.build/Objects-normal/arm64/PermissionManager.stringsdata'
+
+Multiple commands produce '/Users/michaellee/Library/Developer/Xcode/DerivedData/powernap-andpvffqpuvbpydqtebjncivjmxc/Build/Intermediates.noindex/powernap.build/Debug-watchsimulator/powernap Watch App.build/Objects-normal/arm64/PermissionReminderView.stringsdata'
+
+Multiple commands produce '/Users/michaellee/Library/Developer/Xcode/DerivedData/powernap-andpvffqpuvbpydqtebjncivjmxc/Build/Intermediates.noindex/powernap.build/Debug-watchsimulator/powernap Watch App.build/Objects-normal/arm64/MotionService.stringsdata'
+
+
+Build target powernap Watch App of project powernap with configuration Debug
+warning: duplicate output file '/Users/michaellee/Library/Developer/Xcode/DerivedData/powernap-andpvffqpuvbpydqtebjncivjmxc/Build/Intermediates.noindex/powernap.build/Debug-watchsimulator/powernap Watch App.build/Objects-normal/arm64/PermissionReminderView.stringsdata' on task: SwiftDriver Compilation powernap Watch App normal arm64 com.apple.xcode.tools.swift.compiler (in target 'powernap Watch App' from project 'powernap')
+warning: duplicate output file '/Users/michaellee/Library/Developer/Xcode/DerivedData/powernap-andpvffqpuvbpydqtebjncivjmxc/Build/Intermediates.noindex/powernap.build/Debug-watchsimulator/powernap Watch App.build/Objects-normal/arm64/MotionService.stringsdata' on task: SwiftDriver Compilation powernap Watch App normal arm64 com.apple.xcode.tools.swift.compiler (in target 'powernap Watch App' from project 'powernap')
+warning: duplicate output file '/Users/michaellee/Library/Developer/Xcode/DerivedData/powernap-andpvffqpuvbpydqtebjncivjmxc/Build/Intermediates.noindex/powernap.build/Debug-watchsimulator/powernap Watch App.build/Objects-normal/arm64/SettingsView.stringsdata' on task: SwiftDriver Compilation powernap Watch App normal arm64 com.apple.xcode.tools.swift.compiler (in target 'powernap Watch App' from project 'powernap')
+warning: duplicate output file '/Users/michaellee/Library/Developer/Xcode/DerivedData/powernap-andpvffqpuvbpydqtebjncivjmxc/Build/Intermediates.noindex/powernap.build/Debug-watchsimulator/powernap Watch App.build/Objects-normal/arm64/PermissionManager.stringsdata' on task: SwiftDriver Compilation powernap Watch App normal arm64 com.apple.xcode.tools.swift.compiler (in target 'powernap Watch App' from project 'powernap')
+
+
+duplicate output file '/Users/michaellee/Library/Developer/Xcode/DerivedData/powernap-andpvffqpuvbpydqtebjncivjmxc/Build/Intermediates.noindex/powernap.build/Debug-watchsimulator/powernap Watch App.build/Objects-normal/arm64/PermissionReminderView.stringsdata' on task: SwiftDriver Compilation powernap Watch App normal arm64 com.apple.xcode.tools.swift.compiler
+
+duplicate output file '/Users/michaellee/Library/Developer/Xcode/DerivedData/powernap-andpvffqpuvbpydqtebjncivjmxc/Build/Intermediates.noindex/powernap.build/Debug-watchsimulator/powernap Watch App.build/Objects-normal/arm64/MotionService.stringsdata' on task: SwiftDriver Compilation powernap Watch App normal arm64 com.apple.xcode.tools.swift.compiler
+
+duplicate output file '/Users/michaellee/Library/Developer/Xcode/DerivedData/powernap-andpvffqpuvbpydqtebjncivjmxc/Build/Intermediates.noindex/powernap.build/Debug-watchsimulator/powernap Watch App.build/Objects-normal/arm64/SettingsView.stringsdata' on task: SwiftDriver Compilation powernap Watch App normal arm64 com.apple.xcode.tools.swift.compiler
+
+duplicate output file '/Users/michaellee/Library/Developer/Xcode/DerivedData/powernap-andpvffqpuvbpydqtebjncivjmxc/Build/Intermediates.noindex/powernap.build/Debug-watchsimulator/powernap Watch App.build/Objects-normal/arm64/PermissionManager.stringsdata' on task: SwiftDriver Compilation powernap Watch App normal arm64 com.apple.xcode.tools.swift.compiler
+
+
+
+Build failed    4/13/25, 1:18 AM    0.4 seconds

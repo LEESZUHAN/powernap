@@ -3,48 +3,6 @@ import HealthKit
 import SwiftUI
 import Combine
 
-/// 年齡組枚舉，用於根據年齡調整睡眠檢測參數
-enum AgeGroup: String, CaseIterable, Codable, Identifiable {
-    /// 青少年組 (10-17歲)
-    case teen = "青少年 (10-17歲)"
-    
-    /// 成人組 (18-59歲)
-    case adult = "成人 (18-59歲)"
-    
-    /// 銀髮族 (60歲以上)
-    case senior = "銀髮族 (60歲以上)"
-    
-    /// 用於列表識別的ID
-    var id: String { self.rawValue }
-    
-    /// 心率閾值百分比 - 低於靜息心率多少比例視為可能入睡
-    var hrThresholdPercentage: Double {
-        switch self {
-        case .teen:   return 0.875  // 87.5% (低於靜息心率的85-90%)
-        case .adult:  return 0.9    // 90% (低於靜息心率的10%)
-        case .senior: return 0.935  // 93.5% (低於靜息心率的6.5%)
-        }
-    }
-    
-    /// 持續時間要求 - 需要維持多少秒的低心率才判定為入睡
-    var minDurationSeconds: Int {
-        switch self {
-        case .teen:   return 120  // 2分鐘
-        case .adult:  return 180  // 3分鐘
-        case .senior: return 240  // 4分鐘
-        }
-    }
-    
-    /// 根據實際年齡獲取對應年齡組
-    static func from(age: Int) -> AgeGroup {
-        switch age {
-        case 0..<18:  return .teen
-        case 18..<60: return .adult
-        default:      return .senior
-        }
-    }
-}
-
 /// 睡眠數據收集會話
 struct SleepSession: Codable {
     /// 會話日期
@@ -53,8 +11,8 @@ struct SleepSession: Codable {
     let heartRates: [Double]
     /// 靜息心率值
     let restingHeartRate: Double
-    /// 是否為夜間睡眠
-    let isNightSleep: Bool
+    /// 是否為夜間睡眠 - 僅用於向後兼容，新版本都將此值設為false
+    let isNightSleep: Bool = false
     /// 睡眠心率平均值
     var averageHeartRate: Double {
         heartRates.isEmpty ? 0 : heartRates.reduce(0, +) / Double(heartRates.count)
@@ -87,10 +45,10 @@ class PersonalizedHRModelService: ObservableObject {
     private let thresholdKey = "optimizedHRThreshold"
     private let sessionsKey = "sleepSessions"
     private let lastUpdateKey = "lastModelUpdateDate"
+    private let userAdjustmentKey = "userSleepAdjustmentPercentage" // 新增: 用戶調整百分比的鍵值
     
     /// 白天與夜間睡眠的不同閾值
     private let daytimeThresholdKey = "daytimeHRThreshold"
-    private let nighttimeThresholdKey = "nighttimeHRThreshold"
     
     /// 版本控制 - 用於數據遷移
     private let dataVersionKey = "hrModelDataVersion"
@@ -141,19 +99,33 @@ class PersonalizedHRModelService: ObservableObject {
     private var baselineHeartRate: Double = 0
     private var minimumHeartRate: Double = 0
     
+    /// 用戶手動調整的放寬判定百分比 (0-15%)
+    @Published var userAdjustmentPercentage: Double = 0.0 {
+        didSet {
+            // 當值改變時保存到UserDefaults
+            UserDefaults.standard.set(userAdjustmentPercentage, forKey: userAdjustmentKey)
+        }
+    }
+    
     /// 初始化
     init(ageGroup: AgeGroup) {
         self.ageGroup = ageGroup
         
-        // 檢查數據版本，執行必要的遷移
-        checkAndMigrateDataIfNeeded()
-        
+        // 首先設置optimizedThresholdPercentage的初始值，然後再調用其他方法
         // 嘗試從存儲中加載優化閾值
         if let savedThreshold = UserDefaults.standard.object(forKey: thresholdKey) as? Double {
             self.optimizedThresholdPercentage = savedThreshold
         } else {
             // 首次使用，使用年齡組預設值
-            self.optimizedThresholdPercentage = ageGroup.hrThresholdPercentage
+            self.optimizedThresholdPercentage = ageGroup.heartRateThresholdPercentage
+        }
+        
+        // 現在所有屬性都已初始化，可以安全調用方法
+        checkAndMigrateDataIfNeeded()
+        
+        // 載入用戶手動調整的百分比
+        if let adjustment = UserDefaults.standard.object(forKey: userAdjustmentKey) as? Double {
+            self.userAdjustmentPercentage = adjustment
         }
         
         // 記錄首次使用日期
@@ -236,13 +208,13 @@ class PersonalizedHRModelService: ObservableObject {
         var filteredRates = heartRates.filter { $0 >= lowerBound && $0 <= upperBound }
         
         // 若過濾後數據過少，使用較寬鬆的標準重新過濾
-        if filteredRates.count < heartRates.count * 0.7 {
+        if filteredRates.count < Int(Double(heartRates.count) * 0.7) {
             let relaxedLowerBound = q1 - (2.5 * iqr)
             let relaxedUpperBound = q3 + (2.5 * iqr)
             filteredRates = heartRates.filter { $0 >= relaxedLowerBound && $0 <= relaxedUpperBound }
             
             // 如果仍然過濾太多，使用原始數據
-            if filteredRates.count < heartRates.count * 0.5 {
+            if filteredRates.count < Int(Double(heartRates.count) * 0.5) {
                 print("使用原始心率數據 - 過濾太嚴格")
                 filteredRates = heartRates
             }
@@ -280,7 +252,7 @@ class PersonalizedHRModelService: ObservableObject {
             }
             
             // 確保過濾後還有足夠數據
-            if stableRates.count >= filteredRates.count * 0.8 {
+            if stableRates.count >= Int(Double(filteredRates.count) * 0.8) {
                 return stableRates
             }
         }
@@ -293,6 +265,8 @@ class PersonalizedHRModelService: ObservableObject {
     }
     
     /// 檢測是否為夜間睡眠
+    /// - 注意：此函數已棄用，僅為向後兼容保留
+    @available(*, deprecated, message: "PowerNap應用現在只專注於白天短暫休息")
     private func isNightSleep() -> Bool {
         let hour = Calendar.current.component(.hour, from: Date())
         // 通常晚上10點到早上6點視為夜間
@@ -306,15 +280,11 @@ class PersonalizedHRModelService: ObservableObject {
         // 過濾異常值
         let filteredHeartRates = filterOutliers(from: heartRates)
         
-        // 檢測是否為夜間睡眠
-        let nightSleep = isNightSleep()
-        
-        // 創建新的睡眠會話
+        // 創建新的睡眠會話，永遠標記為白天睡眠
         let newSession = SleepSession(
             date: Date(),
             heartRates: filteredHeartRates,
-            restingHeartRate: restingHeartRate,
-            isNightSleep: nightSleep
+            restingHeartRate: restingHeartRate
         )
         
         // 添加到會話列表
@@ -346,27 +316,23 @@ class PersonalizedHRModelService: ObservableObject {
     
     /// 根據當前心率和靜息心率計算實際閾值
     func calculateThreshold(for restingHeartRate: Double) -> Double {
-        // 檢查是白天還是夜間，使用相應的閾值
+        // 不再區分白天和夜間，統一使用白天閾值
         let thresholdPercentage: Double
         
-        if isNightSleep() {
-            // 夜間使用較低閾值
-            if let nightThreshold = UserDefaults.standard.object(forKey: nighttimeThresholdKey) as? Double {
-                thresholdPercentage = nightThreshold
-            } else {
-                // 夜間默認閾值略低於白天
-                thresholdPercentage = optimizedThresholdPercentage - 0.02
-            }
+        if let dayThreshold = UserDefaults.standard.object(forKey: daytimeThresholdKey) as? Double {
+            thresholdPercentage = dayThreshold
         } else {
-            // 白天使用正常閾值
-            if let dayThreshold = UserDefaults.standard.object(forKey: daytimeThresholdKey) as? Double {
-                thresholdPercentage = dayThreshold
-            } else {
-                thresholdPercentage = optimizedThresholdPercentage
-            }
+            thresholdPercentage = optimizedThresholdPercentage
         }
         
-        return restingHeartRate * thresholdPercentage
+        // 應用用戶的手動調整(增加閾值 = 放寬判定)
+        // 用戶調整值為0-15%，轉換為0-0.15的小數
+        let adjustedThreshold = thresholdPercentage + (userAdjustmentPercentage / 100.0)
+        
+        // 確保調整後的閾值不超過最大限制
+        let finalThreshold = min(adjustedThreshold, maxThreshold)
+        
+        return restingHeartRate * finalThreshold
     }
     
     /// 檢查並更新心率模型
@@ -412,35 +378,18 @@ class PersonalizedHRModelService: ObservableObject {
     private func updateModel() {
         print("開始更新個人化心率模型...")
         
-        // 將會話分為白天和夜間
-        let daytimeSessions = sleepSessions.filter { !$0.isNightSleep }
-        let nighttimeSessions = sleepSessions.filter { $0.isNightSleep }
+        // 不再分開處理白天和夜間數據
+        // 將所有會話視為白天會話
         
         // 更新白天模型
         updateSpecificModel(
-            for: daytimeSessions,
+            for: sleepSessions,
             threshold: &optimizedThresholdPercentage,
             thresholdKey: daytimeThresholdKey,
             label: "白天"
         )
         
-        // 如果有夜間數據，更新夜間模型
-        if !nighttimeSessions.isEmpty {
-            var nighttimeThreshold: Double
-            
-            if let saved = UserDefaults.standard.object(forKey: nighttimeThresholdKey) as? Double {
-                nighttimeThreshold = saved
-            } else {
-                nighttimeThreshold = optimizedThresholdPercentage - 0.02
-            }
-            
-            updateSpecificModel(
-                for: nighttimeSessions,
-                threshold: &nighttimeThreshold,
-                thresholdKey: nighttimeThresholdKey,
-                label: "夜間"
-            )
-        }
+        // 不再處理夜間模型
         
         // 清理舊數據（保留最近20條記錄）
         if sleepSessions.count > 20 {
@@ -617,13 +566,12 @@ class PersonalizedHRModelService: ObservableObject {
     /// 重置模型（用於測試）
     func resetModel() {
         sleepSessions = []
-        optimizedThresholdPercentage = ageGroup.hrThresholdPercentage
+        optimizedThresholdPercentage = ageGroup.heartRateThresholdPercentage
         lastUpdateDate = nil
         firstUseDate = nil
         
         UserDefaults.standard.removeObject(forKey: thresholdKey)
         UserDefaults.standard.removeObject(forKey: daytimeThresholdKey)
-        UserDefaults.standard.removeObject(forKey: nighttimeThresholdKey)
         UserDefaults.standard.removeObject(forKey: sessionsKey)
         UserDefaults.standard.removeObject(forKey: lastUpdateKey)
         UserDefaults.standard.removeObject(forKey: "firstUseDate")
@@ -656,7 +604,7 @@ class PersonalizedHRModelService: ObservableObject {
         baselineHeartRate = restingHeartRate
         
         // 更新最小心率（假設為基線心率的某個百分比）
-        minimumHeartRate = restingHeartRate * ageGroup.hrThresholdPercentage
+        minimumHeartRate = restingHeartRate * ageGroup.heartRateThresholdPercentage
         
         // 保存到 UserDefaults
         UserDefaults.standard.set(baselineHeartRate, forKey: "baselineHeartRate")

@@ -3,6 +3,8 @@ import SwiftUI
 /// 健康數據設置視圖，顯示個人化心率模型的相關數據
 struct HealthStatsSettingsView: View {
     @ObservedObject var viewModel: PowerNapViewModel
+    @State private var selectedAdjustment: Int = 0 // 0%, 5%, 10%, 15%
+    private let adjustmentOptions = [0, 5, 10, 15]
     
     var body: some View {
         List {
@@ -42,6 +44,19 @@ struct HealthStatsSettingsView: View {
                 #endif
             }
             
+            // 放寬入睡判定 (新增)
+            Section(header: Text("入睡判定調整"), footer: Text("若您發現入睡計時器沒有自動啟動，可以適當放寬判定標準。建議先使用預設值，如有需要再逐步調整。")) {
+                Picker("放寬入睡判定", selection: $selectedAdjustment) {
+                    ForEach(0..<adjustmentOptions.count, id: \.self) { index in
+                        Text("\(adjustmentOptions[index])%").tag(index)
+                    }
+                }
+                .pickerStyle(SegmentedPickerStyle())
+                .onChange(of: selectedAdjustment) { newValue in
+                    viewModel.setUserSleepAdjustment(percentage: Double(adjustmentOptions[newValue]))
+                }
+            }
+            
             // 年齡設置，影響預設心率閾值
             Section(header: Text("年齡組設置")) {
                 HStack {
@@ -75,6 +90,11 @@ struct HealthStatsSettingsView: View {
             }
         }
         .navigationTitle("睡眠檢測設置")
+        .onAppear {
+            // 載入當前調整值
+            let currentAdjustment = viewModel.getUserSleepAdjustment()
+            selectedAdjustment = adjustmentOptions.firstIndex(of: Int(currentAdjustment)) ?? 0
+        }
     }
 }
 

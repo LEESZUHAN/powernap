@@ -1,9 +1,6 @@
 import SwiftUI
 import HealthKit
 
-// 導入PermissionManager
-@_implementationOnly import struct powernap_Watch_App.PermissionManager
-
 struct PermissionReminderView: View {
     @ObservedObject var permissionManager: PermissionManager
     @Binding var isPresented: Bool

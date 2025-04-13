@@ -32,6 +32,13 @@ class MotionService: ObservableObject {
     /// 是否自動調整閾值
     @Published var autoAdjustThreshold: Bool = true
     
+    // 添加 SleepDetectionService 所需的屬性
+    /// 當天是否有高強度活動
+    @Published var hasDailyIntenseActivity: Bool = false
+    
+    /// 活動峰值水平
+    @Published var peakActivityLevel: Double = 0.0
+    
     // 用於儲存動作數據點的結構
     private struct MotionDataPoint {
         let timestamp: Date
@@ -42,6 +49,16 @@ class MotionService: ObservableObject {
     init() {
         motionQueue.maxConcurrentOperationCount = 1
         motionQueue.qualityOfService = .userInitiated
+    }
+    
+    /// 開始動作更新 - 與 startMonitoring 相同功能，添加兼容性
+    func startMotionUpdates() {
+        startMonitoring()
+    }
+    
+    /// 停止動作更新 - 與 stopMonitoring 相同功能，添加兼容性
+    func stopMotionUpdates() {
+        stopMonitoring()
     }
     
     /// 開始監測動作狀態
