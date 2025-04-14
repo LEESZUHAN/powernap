@@ -1,28 +1,27 @@
-// FIXME: 如果此文件編譯失敗，嘗試這些解決方案：
-// 1. 確保所有服務類文件都被添加到"powernap Watch App"目標
-// 2. 在Xcode > Product菜單 > Clean Build Folder，然後重新構建
-// 3. 對於每個無法找到的類，可以嘗試完整路徑引用：powernap_Watch_App.類名
-
 import Foundation
 import Combine
 import SwiftUI
-import HealthKit
 import CoreMotion
-import UserNotifications
+import HealthKit
+
+// 導入所有需要的服務類
+import class powernap_Watch_App.HealthKitService
+import class powernap_Watch_App.MotionService
+import class powernap_Watch_App.SleepDetectionService
+import class powernap_Watch_App.NotificationService
+import enum powernap_Watch_App.SleepState
 
 /// 電源休息視圖模型，處理應用程序的UI邏輯和業務邏輯
 @MainActor
 class PowerNapViewModel: ObservableObject {
-    // 服務依賴，使用臨時代碼以便能夠構建
-    // FIXME: 當模塊引用問題解決後，移除這些臨時代碼
-    class TempService: ObservableObject {
-        @Published var someValue: Bool = false
-    }
-    
-    private let healthKitService = TempService() // 應為HealthKitService()
-    private let motionService = TempService() // 應為MotionService()
-    private let notificationService = TempService() // 應為NotificationService()
-    private lazy var sleepDetectionService = TempService() // 應為SleepDetectionService
+    // 服務依賴
+    private let healthKitService = HealthKitService()
+    private let motionService = MotionService()
+    private let notificationService = NotificationService()
+    private lazy var sleepDetectionService = SleepDetectionService(
+        healthKitService: healthKitService,
+        motionService: motionService
+    )
     
     // 計時器
     private var napTimer: Timer?
@@ -45,7 +44,7 @@ class PowerNapViewModel: ObservableObject {
     @Published var isSleepDetectionEnabled: Bool = true
     @Published var sleepDetected: Bool = false
     @Published var sleepStartTime: Date? = nil
-    @Published var sleepState: String = "awake" // 臨時使用String代替SleepState
+    @Published var sleepState: SleepState = .awake
     @Published var monitoringStatus: String = "等待開始"
     @Published var heartRate: Double = 0
     @Published var restingHeartRate: Double = 0
@@ -55,57 +54,16 @@ class PowerNapViewModel: ObservableObject {
     // 可用的持續時間選項
     let availableDurations = Array(1...30) // 1到30分鐘
     
-    /// 個人化心率模型服務
-    private lazy var personalizedHRModel = TempService() // 應為PersonalizedHRModelService
-    
-    /// 年齡組服務
-    @Published var ageGroupService = TempService() // 應為AgeGroupService()
-    
-    /// 根據年齡組調整的心率閾值百分比
-    private var hrThresholdPercentage: Double {
-        return ageGroupService.currentAgeGroup.hrThresholdPercentage
-    }
-    
-    /// 根據年齡組調整的最小持續時間（秒）
-    private var minDurationSeconds: Int {
-        return ageGroupService.currentAgeGroup.minDurationSeconds
-    }
-    
-    // MARK: - 心率閾值設置
-    
-    /// 設置用戶自定義的入睡判定放寬百分比
-    func setUserSleepAdjustment(percentage: Double) {
-        // 臨時實現
-        print("設置入睡判定放寬: \(percentage)%")
-    }
-    
-    /// 獲取用戶自定義的入睡判定放寬百分比
-    func getUserSleepAdjustment() -> Double {
-        return 0.0 // 臨時返回值
-    }
-    
-    /// 獲取優化的心率閾值百分比
-    var optimizedHRThresholdPercentage: Double {
-        return 0.90 // 臨時返回值
-    }
-    
-    /// 獲取優化的心率閾值
-    var optimizedHRThreshold: Double {
-        guard restingHeartRate > 0 else { return 0 }
-        return restingHeartRate * 0.90 // 臨時計算
-    }
-    
-    /// 重置個人化模型（用於測試）
-    func resetPersonalizedModel() {
-        // 臨時實現
-        print("重置個人化模型")
-    }
-    
     // MARK: - 初始化
     
     init() {
-        // 注意：實際代碼在修復模塊引用問題後需要恢復
-        print("PowerNapViewModel初始化 - 臨時版本")
+        setupBindings()
+        
+        // 初始化通知服務
+        notificationService.initialize()
+        
+        // 載入設置
+        loadUserPreferences()
     }
     
     // 加載用戶偏好設置
@@ -161,7 +119,7 @@ class PowerNapViewModel: ObservableObject {
         sleepDetectionService.$currentSleepState
             .receive(on: DispatchQueue.main)
             .sink { [weak self] (value: SleepState) in
-                self?.sleepState = value.rawValue
+                self?.sleepState = value
                 self?.updateMonitoringStatus()
             }
             .store(in: &cancellables)
@@ -424,82 +382,20 @@ class PowerNapViewModel: ObservableObject {
         monitoringStatus = "睡眠中"
     }
     
-    /// 開始小睡計時器
-    func startNapTimer() {
-        // 檢查睡眠是否已檢測到
-        guard sleepDetectionService.sleepDetected else {
-            print("無法開始計時：尚未檢測到睡眠")
-            return
-        }
-        
-        // 記錄睡眠開始時間
-        if timerStartTime == nil {
-            timerStartTime = Date()
-        }
-        
-        // 設定計時時長（分鐘）
-        let minutes = selectedDuration
-        totalNapDuration = TimeInterval(minutes * 60)
-        
-        // 通知睡眠檢測服務已開始計時
-        sleepDetectionService.startSleepCountdown(durationMinutes: minutes)
-        
-        // 更新狀態為正在小睡
-        napState = .napping
-        
-        // 設定喚醒時間
-        let wakeTime = Date().addingTimeInterval(totalNapDuration)
-        scheduledWakeTime = wakeTime
-        
-        // 啟動計時器
-        startTimer()
-        
-        print("開始小睡計時：\(minutes)分鐘")
-    }
-    
-    /// 處理睡眠狀態變化
-    func handleSleepStateChange(_ state: SleepState) {
-        // 記錄當前睡眠狀態
-        currentSleepState = state
-        
-        // 根據睡眠狀態執行相應操作
-        switch state {
-        case .asleep:
-            // 如果是首次檢測到睡眠且自動開始選項開啟，則自動開始計時
-            if autoStartOnSleepDetection && napState == .preparing && timerStartTime == nil {
-                startNapTimer()
+    /// 啟動休息計時器
+    private func startNapTimer() {
+        napTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
+            guard let self = self else { return }
+            
+            Task { @MainActor in
+                if self.timeRemaining > 0 {
+                    self.timeRemaining -= 1
+                    self.updateProgress()
+                } else {
+                    self.completeNap()
+                }
             }
-            
-        case .disturbed:
-            // 睡眠受到干擾，但不停止計時器
-            // 僅記錄干擾，以便在UI上顯示相關信息
-            disturbanceDetected = true
-            
-        case .awake:
-            // 如果計時已經開始，即使醒來也不停止計時
-            // 這確保即使用戶醒來，預設的小睡時間也會完成
-            if napState == .napping {
-                print("檢測到醒來，但計時繼續進行")
-            }
-            
-        case .potentialSleep:
-            // 可能入睡狀態，不採取特殊操作
-            break
         }
-    }
-    
-    /// 檢查睡眠干擾情況
-    var sleepDisturbanceDescription: String? {
-        guard disturbanceDetected else { return nil }
-        
-        // 獲取干擾次數
-        let count = sleepDetectionService.disturbanceCount
-        
-        if count > 0 {
-            return "檢測到\(count)次睡眠干擾"
-        }
-        
-        return nil
     }
     
     /// 完成休息會話
@@ -606,54 +502,5 @@ class PowerNapViewModel: ObservableObject {
         }
         
         return sleepDetectionService.sleepStateDescription
-    }
-    
-    /// 檢測是否進入睡眠狀態 - 根據心率和年齡組
-    private func isSleepDetected() -> Bool {
-        // 確保有可用的靜息心率
-        guard let restingHR = restingHeartRate, restingHR > 0 else {
-            return false
-        }
-        
-        // 確保已經記錄了心率
-        guard let latestHR = latestHeartRate, latestHR > 0 else {
-            return false
-        }
-        
-        // 根據年齡組計算心率閾值
-        let threshold = restingHR * hrThresholdPercentage
-        
-        // 檢查當前心率是否低於閾值
-        let isLowHeartRate = latestHR < threshold
-        
-        // 如果心率超過閾值，重置計時器
-        if !isLowHeartRate {
-            lowHRStartTime = nil
-            return false
-        }
-        
-        // 如果是首次低於閾值，記錄開始時間
-        if lowHRStartTime == nil {
-            lowHRStartTime = Date()
-            return false
-        }
-        
-        // 檢查低心率持續時間是否滿足年齡組要求
-        guard let startTime = lowHRStartTime else {
-            return false
-        }
-        
-        let duration = Date().timeIntervalSince(startTime)
-        return duration >= Double(minDurationSeconds)
-    }
-    
-    /// 獲取心率閾值描述
-    var heartRateThresholdDescription: String {
-        guard restingHeartRate > 0 else { return "尚未獲取靜息心率" }
-        
-        let threshold = personalizedHRModel.calculateThreshold(for: restingHeartRate)
-        let percentage = personalizedHRModel.optimizedThresholdPercentage * 100
-        
-        return String(format: "心率閾值: %.0f bpm (靜息心率的%.1f%%)", threshold, percentage)
     }
 } 

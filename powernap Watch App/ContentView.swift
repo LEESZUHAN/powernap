@@ -14,8 +14,6 @@ import Foundation
 
 struct ContentView: View {
     @StateObject private var viewModel = PowerNapViewModel()
-    @EnvironmentObject private var permissionManager: PermissionManager
-    @State private var showPermissionReminder = false
     
     var body: some View {
         TabView {
@@ -35,32 +33,10 @@ struct ContentView: View {
                 }
         }
         .onAppear {
-            // 檢查權限狀態
+            // 在應用程式啟動時就初始化HealthKit，以便立即顯示權限請求對話框
             Task {
-                await permissionManager.checkHealthPermissions()
-                if permissionManager.shouldShowPermissionReminder() {
-                    showPermissionReminder = true
-                }
+                await viewModel.initializeHealthKitOnAppear()
             }
-        }
-        // 顯示歡迎引導視圖
-        .fullScreenCover(isPresented: .init(
-            get: { !permissionManager.hasCompletedOnboarding },
-            set: { _ in }
-        )) {
-            WelcomeView(
-                permissionManager: permissionManager,
-                onComplete: {
-                    permissionManager.completeOnboarding()
-                }
-            )
-        }
-        // 顯示權限提醒彈窗
-        .sheet(isPresented: $showPermissionReminder) {
-            PermissionReminderView(
-                permissionManager: permissionManager,
-                isPresented: $showPermissionReminder
-            )
         }
     }
 }
